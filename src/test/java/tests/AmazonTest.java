@@ -13,6 +13,14 @@ import utilities.Driver;
 
 public class AmazonTest extends AmazonSelectedProduct{
 
+    /*
+
+     indirilip ilk calistirildigindan dolayi tarayici'da url olarak hata alınabilir
+     ancak 2. calistirmada sorun olmicaktir.
+     Hata alınırsa extra testng.xml dosyası olusturdum oradan calistirilabilir gerekli bilgiler xml file'a yazıldı.
+
+     */
+
     AmazonCartPage cartPage;
     AmazonHomePage homePage;
     AmazonProductPage productPage;
