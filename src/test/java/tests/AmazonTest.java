@@ -15,7 +15,8 @@ public class AmazonTest extends AmazonSelectedProduct{
 
     /*
       Lütfen Projeyi çalistirmadan önce gereklilikler ve
-      bilgilendirmeler için README.md dosyasını okuyunuz
+      bilgilendirmeler için README.md dosyasını okuyunuz.
+      Daha iyi analiz etme adına türkce olusturulmustur
     */
 
     AmazonCartPage cartPage;

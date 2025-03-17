@@ -8,7 +8,11 @@
 
      */
 
-Projede @By notasyonu ve @FindBy notasyonu kullanildi ikiside projede locat almak icin kullanildi birisi selenium 4den sonra geldi projenin daha fazla dinamik olmasi icin böyle bir yol izledim.
+📌 Projede @By notasyonu ve @FindBy notasyonu kullanildi ikiside projede locat almak icin kullanildi birisi selenium 4den sonra geldi projenin daha fazla dinamik olmasi icin böyle bir yol izledim.
+
+📌 Test sonuçlarını Intellij IDEA terminale : `allure serve ` yazıp enter ile görüntüleyebilirsin.
+
+📌 Test adımları icin ekstra beklemeler yerlestirdim internet hızlarından kaynakli hatalari azaltmak icin
 
 
 ## 🚀 Kullanılan Teknolojiler
@@ -20,9 +24,12 @@ Projede @By notasyonu ve @FindBy notasyonu kullanildi ikiside projede locat alma
 - **testng.xml**
 
 
-📌 Test sonuçlarını Intellij IDEA terminale : `allure serve ` yazıp enter ile görüntüleyebilirsin.
+## 📌 Project Timeline
+- **Week 1: Requirement analysis and tool selectioni**
+- **Week 1: Framework design and setup.**
+- **Week 1: Script development and initial test execution.**
 
-📌 Test adımları icin ekstra beklemeler yerlestirdim internet hızlarından kaynakli hatalari azaltmak icin
+
 
 
 ## 📌 Test Case Steps

@@ -39,6 +39,7 @@ public class AmazonProductPage extends ReusableMethods{
         Actions actions = new Actions(Driver.getDriver());
         ReusableMethods.wait(1);
         actions.sendKeys(Keys.PAGE_DOWN).perform();
+        ReusableMethods.wait(1);
     }
 
     @Step("Arama sonucunun ikinci sayfasina gidilip, dogrulandi")
