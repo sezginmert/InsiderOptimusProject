@@ -15,7 +15,7 @@
 📌 Test adımları icin ekstra beklemeler yerlestirdim internet hızlarından kaynakli hatalari azaltmak icin
 
 
-## 🚀 Kullanılan Teknolojiler
+## 🚀 Technology Tools Used
 - **Java 17 coretto**
 - **Selenium WebDriver**
 - **TestNG**
