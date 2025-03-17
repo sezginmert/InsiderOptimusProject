@@ -20,8 +20,9 @@ Projede @By notasyonu ve @FindBy notasyonu kullanildi ikiside projede locat alma
 - **testng.xml**
 
 
-Test sonuçlarını Intellij IDEA terminale : `allure serve ` yazıp enter ile görüntüleyebilirsin.
+📌 Test sonuçlarını Intellij IDEA terminale : `allure serve ` yazıp enter ile görüntüleyebilirsin.
 
+📌 Test adımları icin ekstra beklemeler yerlestirdim internet hızlarından kaynakli hatalari azaltmak icin
 
 
 ## 📌 Test Case Steps

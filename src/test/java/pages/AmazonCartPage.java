@@ -37,8 +37,8 @@ public class AmazonCartPage extends ReusableMethods{
     @Step("Sepete ürünü ekler ve dogrular")
     public void addToCartAndVerify() {
 
-            ReusableMethods.wait(1);
             ReusableMethods.scrollToElement(product_card_add_button);
+            ReusableMethods.wait(1);
             Driver.getDriver().findElement(By.id("add-to-cart-button")).click();
             expected = ConfigReader.getProperty("expected_sepet");
             actual = Driver.getDriver().findElement(cart_add).getText();

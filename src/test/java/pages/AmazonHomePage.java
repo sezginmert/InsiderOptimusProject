@@ -29,11 +29,14 @@ public class AmazonHomePage extends ReusableMethods {
         Driver.getDriver().get(ConfigReader.getProperty("amazon_Url"));
         String expectedHomePage = ConfigReader.getProperty("amazon_homepage");
         String actualHomePage = Driver.getDriver().getCurrentUrl();
+        ReusableMethods.wait(1);
         Assert.assertEquals(actualHomePage,expectedHomePage);
     }
 
     @Step("Amazon.com.tr'de cikan cookie handle ediliyor eger yoksa try-catch ile adimi atliyor")
     public void cookieHandle(){
+
+        ReusableMethods.wait(1);
 
        try {
            Driver.getDriver().findElement(accept_cookie).click();
@@ -50,6 +53,7 @@ public class AmazonHomePage extends ReusableMethods {
        WebElement searchBox = Driver.getDriver().findElement(amazon_search_box);
        searchBox.sendKeys(ConfigReader.getProperty(urun));
        Actions actions = new Actions(Driver.getDriver());
+       ReusableMethods.wait(1);
        actions.sendKeys(Keys.ENTER).perform();
 
        return searchBox;

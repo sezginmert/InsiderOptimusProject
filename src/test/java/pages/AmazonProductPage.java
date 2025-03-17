@@ -34,9 +34,9 @@ public class AmazonProductPage extends ReusableMethods{
     @Step("Aranan ürünün sonuçlarinin oldugu dogrulanir")
     public void productVerifyFound(){
 
-        Actions actions = new Actions(Driver.getDriver());
         List<WebElement> searchResults = Driver.getDriver().findElements(products_list);
         Assert.assertTrue(searchResults.size() > 1);
+        Actions actions = new Actions(Driver.getDriver());
         ReusableMethods.wait(1);
         actions.sendKeys(Keys.PAGE_DOWN).perform();
     }
@@ -54,6 +54,7 @@ public class AmazonProductPage extends ReusableMethods{
         String actual = Driver.getDriver().getCurrentUrl();
 
         Assert.assertTrue(actual.contains(expected));
+        ReusableMethods.wait(1);
     }
 
 }

@@ -32,6 +32,7 @@ public class AmazonSelectedProduct extends ReusableMethods{
     public void selectThirdProduct(int productIndex){
 
         Actions actions = new Actions(Driver.getDriver());
+        ReusableMethods.wait(1);
         actions.sendKeys(Keys.PAGE_DOWN).perform();
         ReusableMethods.wait(1);
         List<WebElement> searchResults = Driver.getDriver().findElements(products_list);

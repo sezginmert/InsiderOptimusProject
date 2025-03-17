@@ -13,6 +13,10 @@ import utilities.Driver;
 
 public class AmazonTest extends AmazonSelectedProduct{
 
+    /*
+      Lütfen Projeyi çalistirmadan önce gereklilikler ve
+      bilgilendirmeler için README.md dosyasını okuyunuz
+    */
 
     AmazonCartPage cartPage;
     AmazonHomePage homePage;
