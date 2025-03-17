@@ -1,10 +1,10 @@
 # **Amazon Test Otomasyonu**
 
     /*
-
-     Amazonda otomasyonla gidilince iki farklı arayüz gelebiliyor olması gereken arayüz cookie olan
-     indirilip ilk calistirildigindan dolayi tarayici'da url olarak hata alınabilir. Ancak 2. calistirmada sorun olmicaktir.
-     Hata alınırsa extra testng.xml dosyası olusturdum oradan calistirilabilir gerekli bilgiler xml file'a yazıldı.
+         Amazon'da otomasyonla işlem yapıldığında iki farklı arayüzle karşılaşılabilir. Olması gereken arayüz, 
+         cookie'lerin oldugu arayüz olmali ve ilk çalıştırıldığında tarayıcıda hatası alabileceğiniz bir durum yaratabilir.
+         Ancak, ikinci çalıştırmada sorun yaşanmayacaktır. Eğer hata alırsanız, ekstra bir testng.xml dosyası oluşturdum; 
+         bu dosya üzerinden çalıştırılabilir ve gerekli bilgiler XML dosyasına yazılmıştır.
 
      */
 
