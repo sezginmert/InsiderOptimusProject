@@ -17,6 +17,7 @@ public class AmazonTest extends AmazonSelectedProduct{
       Lütfen Projeyi çalistirmadan önce gereklilikler ve
       bilgilendirmeler için README.md dosyasını okuyunuz.
       karmasık olmamasi adına türkce olusturulmustur
+      ayrıca github link : https://github.com/sezginmert/InsiderOptimusProject
     */
 
     AmazonCartPage cartPage;

@@ -10,13 +10,14 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
+import tests.AmazonTest;
 import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
 
 import java.util.List;
 
-public class AmazonProductPage extends ReusableMethods{
+public class AmazonProductPage extends AmazonTest {
 
     public AmazonProductPage(){
         PageFactory.initElements(Driver.getDriver(), this);
@@ -27,25 +28,25 @@ public class AmazonProductPage extends ReusableMethods{
     By products_list = By.xpath("//div[@class='a-section a-spacing-base']");
     By second_button_click = By.xpath("//a[@class='s-pagination-item s-pagination-button s-pagination-button-accessibility']");
 
-    @FindBy(xpath ="//span[@class='s-pagination-item s-pagination-selected']" )
+    @FindBy(xpath ="(//li[@class='s-list-item-margin-right-adjustment'])[2]" )
     public WebElement scroll;
 
 
     @Step("Aranan ürünün sonuçlarinin oldugu dogrulanir")
     public void productVerifyFound(){
 
+        ReusableMethods.wait(1);
+        Actions actions = new Actions(Driver.getDriver());
+        ReusableMethods.wait(2);
+        actions.sendKeys(Keys.PAGE_DOWN).perform();
         List<WebElement> searchResults = Driver.getDriver().findElements(products_list);
         Assert.assertTrue(searchResults.size() > 1);
-        Actions actions = new Actions(Driver.getDriver());
-        ReusableMethods.wait(1);
-        actions.sendKeys(Keys.PAGE_DOWN).perform();
         ReusableMethods.wait(1);
     }
 
     @Step("Arama sonucunun ikinci sayfasina gidilip, dogrulandi")
     public void goToSecondPage(){
 
-        ReusableMethods.wait(1);
         ReusableMethods.scrollToElement(scroll);
         ReusableMethods.wait(1);
         Driver.getDriver().findElement(second_button_click).click();

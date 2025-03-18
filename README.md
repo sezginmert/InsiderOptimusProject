@@ -3,8 +3,8 @@
     /*
          Amazon'da otomasyonla işlem yapıldığında iki farklı arayüzle karşılaşılabilir. Olması gereken arayüz, 
          cookie'lerin oldugu arayüz olmali ve ilk çalıştırıldığında tarayıcıda hatası alabileceğiniz bir durum yaratabilir.
-         Ancak, ikinci çalıştırmada sorun yaşanmayacaktır. Eğer hata alırsanız, ekstra bir testng.xml dosyası oluşturdum; 
-         bu dosya üzerinden çalıştırılabilir ve gerekli bilgiler XML dosyasına yazılmıştır.
+         bunun icin try-catch ile blok olusturdum ve cookie bulmaz ise blok devreye girecek ve test tekrar baslaticak ve hata alınmayacaktir.
+         Eğer hata yinede alırsanız, ekstra bir testng.xml dosyası oluşturdum;  bu dosya üzerinden çalıştırılabilir ve gerekli bilgiler XML dosyasına yazılmıştır.
 
      */
 

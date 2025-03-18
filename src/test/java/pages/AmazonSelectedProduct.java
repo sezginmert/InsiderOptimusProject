@@ -38,6 +38,7 @@ public class AmazonSelectedProduct extends ReusableMethods{
         List<WebElement> searchResults = Driver.getDriver().findElements(products_list);
 
         if (searchResults.size() >= productIndex) {
+            ReusableMethods.wait(1);
             searchResults.get(productIndex - 1).click();
         }
     }

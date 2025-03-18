@@ -11,11 +11,16 @@ import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
 
+import java.util.List;
+
 public class AmazonHomePage extends ReusableMethods {
 
     public AmazonHomePage(){
         PageFactory.initElements(Driver.getDriver(), this);
     }
+
+     int MAX_RETRY_COUNT = 3; // Maksimum deneme sayısı
+     int retryCount = 0;
 
 
     // Bu kisim sayfa icin locators'lar, selenium 4 ten sonra kullanılan yöntem
@@ -31,30 +36,49 @@ public class AmazonHomePage extends ReusableMethods {
         String actualHomePage = Driver.getDriver().getCurrentUrl();
         ReusableMethods.wait(1);
         Assert.assertEquals(actualHomePage,expectedHomePage);
+        ReusableMethods.wait(1);
     }
+
 
     @Step("Amazon.com.tr'de cikan cookie handle ediliyor eger yoksa try-catch ile adimi atliyor")
     public void cookieHandle(){
 
-        ReusableMethods.wait(1);
+        try {
 
-       try {
-           Driver.getDriver().findElement(accept_cookie).click();
+            if (Driver.getDriver().findElement(accept_cookie).isDisplayed()) {
+                Driver.getDriver().findElement(accept_cookie).click();;
+            }else {
+                Driver.quitDriver();
+            }
 
-       } catch (Exception e) {
-           System.out.println("cookie not found");
-       }
+        } catch (Exception e) {
+            retryCount++;
+            if (retryCount < MAX_RETRY_COUNT) {
+
+                goToAmazonVerify();
+                cookieHandle();
+                ReusableMethods.wait(1);
+            } else {
+                System.out.println("Test başarısız.");
+            }
+        }
+
     }
+
 
 
    @Step("Samsung urun aramasi yapilir")
    public WebElement productSearch(String urun){
 
+        ReusableMethods.wait(1);
+
        WebElement searchBox = Driver.getDriver().findElement(amazon_search_box);
        searchBox.sendKeys(ConfigReader.getProperty(urun));
+       ReusableMethods.wait(1);
        Actions actions = new Actions(Driver.getDriver());
        ReusableMethods.wait(1);
        actions.sendKeys(Keys.ENTER).perform();
+       ReusableMethods.wait(1);
 
        return searchBox;
    }

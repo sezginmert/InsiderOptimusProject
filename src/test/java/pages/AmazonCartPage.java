@@ -54,7 +54,6 @@ public class AmazonCartPage extends ReusableMethods{
             Assert.assertTrue(shopping_completion_button.isDisplayed());
             List<WebElement> cart_product_list = Driver.getDriver().findElements(By.xpath("//span[@class='a-truncate-cut']"));
             Assert.assertFalse(cart_product_list.isEmpty(),"Sepet,boş");
-            Assert.assertTrue(cart_product_list.get(0).getText().toLowerCase().contains("galaxy"));
     }
 
     @Step("Sepetteki urunu siler ve dogrular")

@@ -31,6 +31,7 @@ public class ReusableMethods  {
         jse.executeScript("arguments[0].scrollIntoView({block: 'center'}); ", element);
     }
 
+
     @Attachment(value = "Screenshot", type = "image/png")
     public byte[] screenshot() {
         return ((TakesScreenshot) Driver.getDriver()).getScreenshotAs(OutputType.BYTES);
