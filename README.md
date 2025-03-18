@@ -11,6 +11,7 @@
 📌 Projede @By notasyonu ve @FindBy notasyonu kullanildi ikiside projede locat almak icin kullanildi birisi selenium 4den sonra geldi projenin daha fazla dinamik olmasi icin böyle bir yol izledim.
 
 📌 Test sonuçlarını Intellij IDEA terminale : `allure serve ` yazıp enter ile görüntüleyebilirsin.
+   Hatalardan alınan screenshotslar açılan rapordaki teardown metodunun altındaki 'ErrorScreenShots' a kaydediliyor
 
 📌 Test adımları icin ekstra beklemeler yerlestirdim internet hızlarından kaynakli hatalari azaltmak icin
 
