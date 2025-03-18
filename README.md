@@ -25,13 +25,6 @@
 - **testng.xml**
 
 
-## 📌 Project Timeline
-- **Week 1: Requirement analysis and tool selectioni**
-- **Week 1: Framework design and setup.**
-- **Week 1: Script development and initial test execution.**
-
-
-
 
 ## 📌 Test Case Steps
 
